@@ -1,0 +1,66 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:layout_margin = "12dp"
+    android:background="#89EEFA">
+    <EditText
+        android:id = "@+id/etIP"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:hint = "IP-Address"
+        android:inputType = "text" />
+    <EditText
+        android:id = "@+id/etPort"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@+id/etIP"
+        android:hint = "Port No"
+        android:inputType = "number" />
+    <TextView
+        android:id = "@+id/tvConection"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@+id/etPort"
+        android:inputType = "text" />
+    <Button
+        android:id = "@+id/btnConnect"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@+id/tvConection"
+        android:layout_gravity = "center"
+        android:layout_marginTop = "10dp"
+        android:onClick="connect"
+        android:text = "Connect To Server" />
+    <EditText
+        android:id = "@+id/etDocument"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_below="@+id/btnConnect"
+        android:layout_above = "@+id/btnGet"
+        android:hint = "Enter Document Content"
+        android:inputType = "textMultiLine"
+        android:gravity="top|start"
+        android:background="#FFFFFF"/>
+    <Button
+        android:id = "@+id/btnGet"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_above= "@+id/btnSave"
+        android:onClick="get"
+        android:text = "GET DOCUMENT FROM SERVER" />
+    <Button
+        android:id = "@+id/btnSave"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_above= "@+id/btnSend"
+        android:onClick="save"
+        android:text = "SAVE LOCALLY" />
+    <Button
+        android:id = "@+id/btnSend"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_alignParentBottom = "true"
+        android:onClick="send"
+        android:text = "SEND TO SERVER" />
+</RelativeLayout>
